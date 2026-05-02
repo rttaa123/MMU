@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/MMU/MMU/MMU.srcs/sources_1/new/my_block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/MMU/MMU/MMU.srcs/sources_1/new/sv32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv32
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/MMU/MMU/MMU.srcs/sources_1/new/sv32_table_walk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv32_table_walk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/MMU/MMU/MMU.srcs/sources_1/new/sv32_translate_data_to_physical.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv32_translate_data_to_physical
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/MMU/MMU/MMU.srcs/sources_1/new/sv32_translate_instruction_to_physical.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv32_translate_instruction_to_physical
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/MMU/MMU/MMU.srcs/sources_1/new/tag_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tag_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/MMU/MMU/MMU.srcs/sim_1/new/sv32_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv32_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/MMU/newMMU/newMMU.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

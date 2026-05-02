@@ -1,0 +1,45 @@
+Time resolution is 1 ps
+Time=0 resetn=0 mode=11 satp=00000000 addr=00000000 data=00000000 fault=x
+Time=5000 resetn=0 mode=11 satp=00000000 addr=00000000 data=xxxxxxxx fault=0
+Time=20000 resetn=1 mode=11 satp=00000000 addr=00000000 data=xxxxxxxx fault=0
+
+=== Test 1: Page Table Setup ===
+Time=30000 resetn=1 mode=11 satp=00000000 addr=00010000 data=xxxxxxxx fault=0
+Time=45000 resetn=1 mode=11 satp=00000000 addr=00010000 data=00008001 fault=0
+[WRITE] Addr=0x00010000, Data=0x00008001
+Time=60000 resetn=1 mode=11 satp=00000000 addr=00020000 data=00008001 fault=0
+[WRITE] Addr=0x00020000, Data=0x0000d007
+Time=75000 resetn=1 mode=11 satp=00000000 addr=00020000 data=0000d007 fault=0
+Time=80000 resetn=1 mode=11 satp=00000000 addr=00020004 data=0000d007 fault=0
+[WRITE] Addr=0x00020004, Data=0x0000c407
+Time=95000 resetn=1 mode=11 satp=00000000 addr=00020004 data=0000c407 fault=0
+Time=100000 resetn=1 mode=11 satp=00000000 addr=00034321 data=0000c407 fault=0
+[WRITE] Addr=0x00034321, Data=0x12345678
+
+=== Test 2: Enable SV32 Mode ===
+Time=115000 resetn=1 mode=11 satp=80000010 addr=00034321 data=12345678 fault=0
+
+=== Test 3: Virtual Address Access ===
+Time=135000 resetn=1 mode=01 satp=80000010 addr=00034321 data=12345678 fault=0
+Time=140000 resetn=1 mode=01 satp=80000010 addr=00000321 data=00000000 fault=0
+Time=185000 resetn=1 mode=01 satp=80000010 addr=00000321 data=00008001 fault=0
+Time=205000 resetn=1 mode=01 satp=80000010 addr=00000321 data=xxxxxxxx fault=0
+[READ] Addr=0x00000321, Got=0xxxxxxxxx, Expected=0x12345678
+[ERROR] Data mismatch!
+Time=220000 resetn=1 mode=01 satp=80000010 addr=00001321 data=00000000 fault=0
+Time=285000 resetn=1 mode=01 satp=80000010 addr=00001321 data=00008001 fault=0
+Time=305000 resetn=1 mode=01 satp=80000010 addr=00001321 data=xxxxxxxx fault=0
+[WRITE] Addr=0x00001321, Data=0xa5a5a5a5
+Time=320000 resetn=1 mode=01 satp=80000010 addr=00001321 data=00000000 fault=0
+Time=375000 resetn=1 mode=01 satp=80000010 addr=00001321 data=00008001 fault=0
+Time=395000 resetn=1 mode=01 satp=80000010 addr=00001321 data=xxxxxxxx fault=0
+[READ] Addr=0x00001321, Got=0xxxxxxxxx, Expected=0xa5a5a5a5
+[ERROR] Data mismatch!
+
+=== Test 4: Page Fault Test ===
+Time=410000 resetn=1 mode=01 satp=80000010 addr=deadbeef data=00000000 fault=0
+Time=485000 resetn=1 mode=01 satp=80000010 addr=deadbeef data=00000000 fault=1
+[FAULT] Page fault detected at addr=0xdeadbeef
+Fatal: Page fault occurred, simulation stopped
+Time: 495 ns  Iteration: 0  Process: /sv32_test/read_transaction  Scope: sv32_test.read_transaction  File: D:/MMU/MMU/MMU.srcs/sim_1/new/sv32_test.v Line: 133
+$finish called at time : 495 ns

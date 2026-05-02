@@ -1,0 +1,17 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date              : Sat May 17 13:20:36 2025
+| Host              : DESKTOP-AHD707A running 64-bit major release  (build 9200)
+| Command           : report_bus_skew -warn_on_violation -file sv32_bus_skew_routed.rpt -pb sv32_bus_skew_routed.pb -rpx sv32_bus_skew_routed.rpx
+| Design            : sv32
+| Device            : xcu250-figd2104
+| Speed File        : -2L  PRODUCTION 1.28 03-30-2022
+| Design State      : Routed
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat May 17 13:14:26 2025
+# Process ID         : 17104
+# Current directory  : D:/MMU/newMMU/newMMU.runs/impl_1
+# Command line       : vivado.exe -log sv32.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source sv32.tcl -notrace
+# Log file           : D:/MMU/newMMU/newMMU.runs/impl_1/sv32.vdi
+# Journal file       : D:/MMU/newMMU/newMMU.runs/impl_1\vivado.jou
+# Running On         : DESKTOP-AHD707A
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-12500H
+# CPU Frequency      : 3110 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16849 MB
+# Swap memory        : 6174 MB
+# Total Virtual      : 23023 MB
+# Available Virtual  : 7646 MB
+#-----------------------------------------------------------
+source sv32.tcl -notrace

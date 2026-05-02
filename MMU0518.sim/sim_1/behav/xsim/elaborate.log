@@ -1,0 +1,37 @@
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sv32_test_behav xil_defaultlib.sv32_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [D:/MMU/MMU/MMU.srcs/sim_1/new/sv32_test.v:133]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 133, File D:/MMU/MMU/MMU.srcs/sim_1/new/sv32_test.v
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/MMU/MMU/MMU.srcs/sources_1/new/sv32.v" Line 55. Module sv32_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/MMU/MMU/MMU.srcs/sources_1/new/sv32_table_walk.v" Line 22. Module sv32_table_walk_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/MMU/MMU/MMU.srcs/sources_1/new/tag_ram.v" Line 22. Module tag_ram_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/MMU/MMU/MMU.srcs/sources_1/new/tag_ram.v" Line 22. Module tag_ram_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/MMU/MMU/MMU.srcs/sources_1/new/sv32_translate_instruction_to_physical.v" Line 22. Module sv32_translate_instruction_to_physical_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/MMU/MMU/MMU.srcs/sources_1/new/sv32_translate_data_to_physical.v" Line 23. Module sv32_translate_data_to_physical_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/MMU/MMU/MMU.srcs/sources_1/new/my_block_ram.v" Line 2. Module my_block_ram_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/MMU/MMU/MMU.srcs/sources_1/new/sv32.v" Line 55. Module sv32_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/MMU/MMU/MMU.srcs/sources_1/new/sv32_table_walk.v" Line 22. Module sv32_table_walk_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/MMU/MMU/MMU.srcs/sources_1/new/tag_ram.v" Line 22. Module tag_ram_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/MMU/MMU/MMU.srcs/sources_1/new/tag_ram.v" Line 22. Module tag_ram_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/MMU/MMU/MMU.srcs/sources_1/new/sv32_translate_instruction_to_physical.v" Line 22. Module sv32_translate_instruction_to_physical_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/MMU/MMU/MMU.srcs/sources_1/new/sv32_translate_data_to_physical.v" Line 23. Module sv32_translate_data_to_physical_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/MMU/MMU/MMU.srcs/sources_1/new/my_block_ram.v" Line 2. Module my_block_ram_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.tag_ram_default
+Compiling module xil_defaultlib.sv32_table_walk_default
+Compiling module xil_defaultlib.sv32_translate_instruction_to_ph...
+Compiling module xil_defaultlib.sv32_translate_data_to_physical_...
+Compiling module xil_defaultlib.sv32_default
+Compiling module xil_defaultlib.my_block_ram_default
+Compiling module xil_defaultlib.sv32_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sv32_test_behav

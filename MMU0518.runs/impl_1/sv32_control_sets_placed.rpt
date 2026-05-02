@@ -1,0 +1,91 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Sat May 17 13:19:21 2025
+| Host         : DESKTOP-AHD707A running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file sv32_control_sets_placed.rpt
+| Design       : sv32
+| Device       : xcu250
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    13 |
+|    Minimum number of control sets                        |    13 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |     3 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    13 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     8 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               4 |            3 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             139 |           39 |
+| Yes          | No                    | No                     |              40 |           12 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             102 |           47 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+---------------------------------------------------------+------------------------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                      Enable Signal                      |                      Set/Reset Signal                      | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+---------------------------------------------------------+------------------------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | sv32_table_walk_I/level[1]_i_1_n_0                      | resetn_IBUF_inst/O                                         |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG |                                                         |                                                            |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG |                                                         | resetn_IBUF_inst/O                                         |                6 |             11 |         1.83 |
+|  clk_IBUF_BUFG | sv32_translate_data/state_reg[0]_0                      | sv32_table_walk_I/state_reg[0]                             |                6 |             12 |         2.00 |
+|  clk_IBUF_BUFG | sv32_translate_instruction/physical_address[31]_i_1_n_0 | sv32_translate_instruction/physical_address[11]_i_1__0_n_0 |                6 |             12 |         2.00 |
+|  clk_IBUF_BUFG | sv32_table_walk_I/base[31]_i_1_n_0                      | resetn_IBUF_inst/O                                         |                9 |             20 |         2.22 |
+|  clk_IBUF_BUFG | sv32_translate_data/state_reg[0]_0                      |                                                            |               10 |             20 |         2.00 |
+|  clk_IBUF_BUFG | sv32_translate_instruction/physical_address[31]_i_1_n_0 |                                                            |               12 |             20 |         1.67 |
+|  clk_IBUF_BUFG | sv32_table_walk_I/itlb_I/E[0]                           | resetn_IBUF_inst/O                                         |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG | sv32_translate_data/E[0]                                | resetn_IBUF_inst/O                                         |               23 |             32 |         1.39 |
+|  clk_IBUF_BUFG | sv32_table_walk_I/dtlb_I/p_0_in__0                      |                                                            |                6 |             44 |         7.33 |
+|  clk_IBUF_BUFG | sv32_table_walk_I/itlb_I/p_0_in                         |                                                            |                6 |             44 |         7.33 |
+|  clk_IBUF_BUFG |                                                         | sv32_table_walk_I/dtlb_I/tlb_flush                         |               33 |            128 |         3.88 |
++----------------+---------------------------------------------------------+------------------------------------------------------------+------------------+----------------+--------------+
+
+
